@@ -9,13 +9,25 @@ The main source code is in `src`:
 - `np_aligned_alloc_module.c` Python extension module
 - `test.py` Numpy tests with the allocator enabled
 
-## Building and Installing
+## Installing and Running Tests 
 
-In a virtual/conda environment with Numpy installed (+ pytest & hypothesis if testing): 
+The Numpy tests require PyTest and Hypothesis.
+
+Either using venv:
 ```shell
 cd np-aligned-alloc
-pip wheel --no-deps --no-build-isolation . 
-pip install --no-build-isolation np_aligned_alloc-*.whl
+python3.10 -m venv ./venv
+source ./venv/bin/activate
+pip install .[test]
+python src/test.py
+```
+
+Or conda:
+```shell
+cd np-aligned-alloc
+conda env create -f ./environment.yml
+conda activate np-aligned-alloc
+python src/test.py
 ```
 
 ## Usage

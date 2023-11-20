@@ -37,5 +37,6 @@ setup(
     ],
     license='MIT',
     install_requires=['numpy>=1.24.0'],
+    extras_require={'test': ['pytest', 'hypothesis']},
     python_requires='>=3.8',
 )

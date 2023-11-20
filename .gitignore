@@ -1,5 +1,7 @@
-/build/
 /.idea/
+/build/
+/venv/
+/.venv/
 *.egg-info/
 *.whl
 *.o
