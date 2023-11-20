@@ -1,7 +1,8 @@
 ### Aligned Memory Allocator for NumPy
 
 An experimental NumPy memory allocator that aligns all allocations to 64 bytes.
-Written as a Python extension in C to investigate a performance regression in Arrow 12.0. 
+Written as a Python extension in C to investigate a performance regression in Arrow 12.0
+(https://github.com/apache/arrow/issues/35498, since fixed).
 
 The main source code is in `src`:
 - `np_aligned_alloc.c` core implementation with no Python or Numpy dependencies
