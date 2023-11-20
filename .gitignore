@@ -1,0 +1,7 @@
+/build/
+/.idea/
+*.egg-info/
+*.whl
+*.o
+glibc_alloc_frag
+realloc_align_check
