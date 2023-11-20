@@ -16,10 +16,9 @@ setup(
             extra_compile_args=['-Wall', '-Wextra', '-Wold-style-definition', '-std=c18', '-O3', '-flto'],
             define_macros=[
                 # ('DEBUG', 1),
-            #     ('_FORTIFY_SOURCE', 2),
+                # ('_FORTIFY_SOURCE', 2),
             ],
             # undef_macros=['NDEBUG'],
-            # define_macros=[],
         ),
     ],
     classifiers=[
@@ -33,10 +32,9 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: 3.12',
     ],
     license='MIT',
     install_requires=['numpy>=1.24.0'],
     extras_require={'test': ['pytest', 'hypothesis']},
-    python_requires='>=3.8',
+    python_requires='>=3.8,<3.12',
 )
