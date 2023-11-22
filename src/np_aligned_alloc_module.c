@@ -30,7 +30,7 @@ PyObject *enable(PyObject *Py_UNUSED(mod), PyObject *Py_UNUSED(args)) {
     PyObject *new_handler = PyCapsule_New(&np_aligned_alloc_mem_handler, "mem_handler", NULL);
     if (new_handler == NULL) {
         // Exception is set
-        return Py_None;
+        return NULL;
     }
 
     PyObject *old_handler = PyDataMem_SetHandler(new_handler);
@@ -39,12 +39,12 @@ PyObject *enable(PyObject *Py_UNUSED(mod), PyObject *Py_UNUSED(args)) {
         if (!PyErr_Occurred()) {
             PyErr_NoMemory();
         }
-
-        return Py_None;
+        // Exception is set
+        return NULL;
     }
 
     Py_DECREF(old_handler);
-    return Py_None;
+    Py_RETURN_NONE;
 }
 
 PyObject *disable(PyObject *Py_UNUSED(mod), PyObject *Py_UNUSED(args)) {
@@ -53,12 +53,12 @@ PyObject *disable(PyObject *Py_UNUSED(mod), PyObject *Py_UNUSED(args)) {
         if (!PyErr_Occurred()) {
             PyErr_NoMemory();
         }
-
-        return Py_None;
+        // Exception is set
+        return NULL;
     }
 
     Py_DECREF(old_handler);
-    return Py_None;
+    Py_RETURN_NONE;
 }
 
 static PyMethodDef module_functions[] = {
