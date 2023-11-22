@@ -1,7 +1,8 @@
 /*
  * Python extension module for Numpy aligned memory allocator.
  */
-#define NPY_NO_DEPRECATED_API NPY_1_24_API_VERSION
+#define NPY_TARGET_VERSION NPY_1_24_API_VERSION
+#define NPY_NO_DEPRECATED_API NPY_TARGET_VERSION
 
 // Include Python.h before any standard headers
 // https://docs.python.org/3/extending/extending.html

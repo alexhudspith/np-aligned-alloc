@@ -1,5 +1,5 @@
-#ifndef np_aligned_alloc_H_
-#define np_aligned_alloc_H_
+#ifndef NP_ALIGNED_ALLOC_H
+#define NP_ALIGNED_ALLOC_H
 
 #include <stdio.h>
 
