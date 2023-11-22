@@ -26,4 +26,4 @@ $(OBJS): $(@:.o=.c)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJS) $(EXES)
+	$(RM) $(OBJS) $(EXES)
